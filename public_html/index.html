@@ -1,4 +1,59 @@
 <!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Canvas Dibujado</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="dibujar.js"></script>
+        <link rel="stylesheet" href="estilos/estilos.css">
+    </head>
+
+    <body style="background: #ddd;" >
+        <section id="canvas">
+            <div>Dibujando con el canvas</div>
+            <hr> 
+            <canvas id="miCanvas" width="400" height="400" style="background: #fff;"></canvas>
+        </section>
+        
+        <section id="tabla">
+            <table border="1">
+                <tr>
+                    <td>Seleccionar figura
+                        <br>
+                        <select name="selectFig" id= "selectFig">
+                            <option value="Rectangulo" selected>Rectángulo</option>
+                            <option value="Circulo">Circulo</option>
+                            <option value="Triangulo">Triángulo</option>
+                            <option value="BezierCuad">Bezier Cuadrática</option>
+                            <option value="BezierCub">Bezier Cúbica</option>
+                        </select>
+                    </td>
+                    <td> 
+                        Color Figura<input type="color" name="colorFig" id="colorFig">
+                    </td>   
+                    <td> 
+                        Contorno<input type="color" name="colorCont" id="colorCont"><!--Para poner color al contorno de la figura-->
+                    </td>
+                    <td> 
+                        Fondo<input type="color" name="colorCont" id="back"><!--Para aplicar un fondo al canvas-->
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section id="formulario">
+            <form method = "post" name  = "form">
+                <input type = "checkbox" name = "ovalo" id = "ovalo">Dibuja ovalo (aleat.)<br><!--checkbox para dibujar ovalos-->
+                <input type = "radio" name = "check" id = "check1"><label for="check1">Gradiente líneal</label><br><!--Radio para escoger entre gradiente líneal y radial-->
+                <input type = "radio" name = "check" id = "check2"><label for="check2">Gradiente radial</label><br>
+                <input id="btnDibujar" type="button" value="Dibujar"> <input type="button" id="clear" value="Limpiar"><!--Botón-->
+            </form>
+        </section>
+        
+        
+    </body>
+</html >
+
+<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
